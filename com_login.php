@@ -76,7 +76,7 @@
 
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li class="active"><a href="homepage.php">Home</a></li>
-                
+                <li class="active"><a href="admin_login.php">Admin</a></li>
                 <li class="has-children">
                   <a href="category.html">Employee</a>
                   <ul class="dropdown">
