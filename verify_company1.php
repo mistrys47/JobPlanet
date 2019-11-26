@@ -37,7 +37,7 @@ mysqli_select_db($con,"customer_su")or
 use PHPMailer\PHPMailer\PHPMailer;
       use PHPMailer\PHPMailer\Exception;
       $username=$_SESSION["email"];
-
+if(isset($_POST["submit"])){
 $q="select * from com_su";
 $r=mysqli_query($con,$q);
 while($row=mysqli_fetch_row($r))
@@ -50,5 +50,21 @@ while($row=mysqli_fetch_row($r))
   }
 } 
 
+header("Location:background.php");}
+else
+{
+  $q="select * from com_su";
+$r=mysqli_query($con,$q);
+while($row=mysqli_fetch_row($r))
+{
+  $x=$row[0].'chk';
+  if(isset($_POST[$x]))
+  {
+    $q1="update com_su set verified='-1' where companyid='$row[0]'";
+    mysqli_query($con,$q1);
+  }
+} 
+
 header("Location:background.php");
+}
 ?>

@@ -82,7 +82,7 @@ $imagename=$_FILES['profileimage']['name'];
 
 	
 $otpValue=rand(100000,999999);
-
+echo '<script>alert('.$otpValue.');</script>';
 
 	
 }
@@ -319,7 +319,8 @@ if(isset($_POST['btn'])){
 		catch (Exception $e) {
 			
 			echo "<script>alert('OTP hasnot been sent...".$mail->ErrorInfo."');</script>";
-			echo "<script> location='com_su.php';</script>";
+
+			//echo "<script> location='com_su.php';</script>";
 		}
 	
 	

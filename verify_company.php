@@ -46,6 +46,10 @@ mysqli_select_db($con,"customer_su")or
     echo '<form method="post" action="verify_company1.php" >';
     $q="select * from com_su where verified='0'";
     $i=mysqli_query($con,$q);
+    if(mysqli_num_rows($i)==0)
+    {
+        echo "<script>alert('No new company');location.href='background.php';</script>";
+    }
         while($row2=mysqli_fetch_row($i))
         {
 			?>
@@ -91,7 +95,7 @@ mysqli_select_db($con,"customer_su")or
         
         }
    
-    echo "<input type='submit' name='submit' class='btn btn-primary  py-2 px-4' style='margin-top:10px;'>";
+    echo "<input type='submit' name='submit' value='Approve' class='btn btn-primary  py-2 px-4' style='margin-top:10px;'><input type='submit' name='submit1' value='Reject' class='btn btn-primary py-2 px-4' style='margin-left: 10px;margin-top: 10px;'>";
 	
 		
 	echo "</form>";

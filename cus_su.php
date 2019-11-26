@@ -85,7 +85,7 @@ $res=$_FILES['resume']['name'];
 
 	
 $otpValue=rand(100000,999999);
-
+echo '<script>alert('.$otpValue.');</script>';
 
 	
 }
@@ -327,7 +327,7 @@ if(isset($_POST['btn'])){
 		catch (Exception $e) {
 			
 			echo "<script>alert('OTP hasnot been sent...".$mail->ErrorInfo."');</script>";
-			echo "<script> location='cus_su.php';</script>";
+			//echo "<script> location='cus_su.php';</script>";
 		}
 	
 	

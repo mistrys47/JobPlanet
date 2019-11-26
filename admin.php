@@ -73,7 +73,7 @@ session_start();
 	
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li class="active"><a href="admin.php">Home</a></li>
-				<li><a href="verify_company.php" target="target"> Approve New Company</a></li>
+				<li><a href="verify_company.php" target="target"> Newly Registered Company</a></li>
         <li><a href="disapprove_company.php" target="target"> Block Company</a></li>				
 				<li><a href="aboutus.php" target="target">About</a></li>
 				<li><a href="logout.php">Logout</a></li>

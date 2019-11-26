@@ -6,7 +6,7 @@ $con=mysqli_connect("127.0.0.1","root","")or
         die("Could not select db: " . mysql_error());
 
 	$tags='';
-	$result=mysqli_query($con,"SELECT * FROM com_su WHERE 1");
+	$result=mysqli_query($con,"SELECT * FROM com_su WHERE verified='1'");
 	//echo "SELECT * FROM com_su WHERE 1";
 		while($n=mysqli_fetch_array($result))
 		{

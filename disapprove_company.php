@@ -91,7 +91,7 @@ mysqli_select_db($con,"customer_su")or
         
         }
    
-    echo "<input type='submit' name='submit' class='btn btn-primary  py-2 px-4' style='margin-top:10px;'>";
+    echo "<input type='submit' name='submit' value='Block' class='btn btn-primary  py-2 px-4' style='margin-top:10px;'>";
 	
 		
 	echo "</form>";
